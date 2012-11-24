@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87FB03B0-B134-4CE7-937F-0EA9BB0A3CBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Build\Debug_ARM\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>..\Build\Release_ARM\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Build\Debug_x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Build\Release_x64\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Build\Debug_x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Build\Release_x86\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;DSQLITE_OS_WINRT</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\RealmConfig.cs" />
+    <Compile Include="Configuration\WorldConfig.cs" />
+    <Compile Include="Console\Commands\AccountCommands.cs" />
+    <Compile Include="Console\Commands\CommandDefinitions.cs" />
+    <Compile Include="Console\Commands\CommandManager.cs" />
+    <Compile Include="Console\Commands\CommandParser.cs" />
+    <Compile Include="Constants\AccountDataTypes.cs" />
+    <Compile Include="Constants\Authentication\AuthCodes.cs" />
+    <Compile Include="Constants\Authentication\AuthLinks.cs" />
+    <Compile Include="Constants\Authentication\AuthResults.cs" />
+    <Compile Include="Constants\Guids\HighGuidMask.cs" />
+    <Compile Include="Constants\Guids\HighGuidType.cs" />
+    <Compile Include="Constants\MessageTypes.cs" />
+    <Compile Include="Constants\NetMessages.cs" />
+    <Compile Include="Constants\ObjectSettings\MovementSpeeds.cs" />
+    <Compile Include="Constants\ObjectType.cs" />
+    <Compile Include="Constants\SplineMovement\MovementFlags.cs" />
+    <Compile Include="Constants\UpdateFields\UpdateFieldFlags.cs" />
+    <Compile Include="Constants\UpdateFields\UpdateFields.cs" />
+    <Compile Include="Constants\UpdateFlags.cs" />
+    <Compile Include="Constants\UpdateType.cs" />
+    <Compile Include="Cryptography\PacketCrypt.cs" />
+    <Compile Include="Cryptography\SARC4.cs" />
+    <Compile Include="Cryptography\SRP6.cs" />
+    <Compile Include="Database\DB.cs" />
+    <Compile Include="Database\SQLiteBase.cs" />
+    <Compile Include="Database\SQLResult.cs" />
+    <Compile Include="DBC\DB2Fmt.cs" />
+    <Compile Include="DBC\DB2Loader.cs" />
+    <Compile Include="DBC\DB2Reader.cs" />
+    <Compile Include="DBC\DB2Storage.cs" />
+    <Compile Include="DBC\DB2Structure.cs" />
+    <Compile Include="DBC\DBCExtensions.cs" />
+    <Compile Include="DBC\DBCFmt.cs" />
+    <Compile Include="DBC\DBCLoader.cs" />
+    <Compile Include="DBC\DBCReader.cs" />
+    <Compile Include="DBC\DBCStorage.cs" />
+    <Compile Include="DBC\DBCStructure.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\LogTypes.cs" />
+    <Compile Include="Logging\PacketLogging\PacketLog.cs" />
+    <Compile Include="Network\Packets\BitPack.cs" />
+    <Compile Include="Network\Packets\BitUnpack.cs" />
+    <Compile Include="Network\Packets\OpcodeAttribute.cs" />
+    <Compile Include="Network\Packets\PacketReader.cs" />
+    <Compile Include="Network\Packets\PacketWriter.cs" />
+    <Compile Include="ObjectDefines\Account.cs" />
+    <Compile Include="ObjectDefines\ObjectMovementValues.cs" />
+    <Compile Include="ObjectDefines\Realm.cs" />
+    <Compile Include="ObjectDefines\Vector4.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Singleton\SingletonBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=11.0">
+      <Name>Microsoft Visual C++ Runtime Package</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Community.CsharpSqlite.SQLiteClient.WinRT">
+      <HintPath>..\Libs\Community.CsharpSqlite.SQLiteClient.WinRT.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRT.Data">
+      <HintPath>..\Libs\WinRT.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
